@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;} *  {
+  background-image: url('static/images/indeximg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /*color:rgb(255, 252, 252);*/
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  opacity: 0.6;
+  padding: 12px;
+  border: 1px solid rgb(21, 19, 19);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  /*background-color: #B8EEFE;*/
+  padding: 20px;
+}
+</style>
+</head>
+<body class="intro-header" style="background-image: url('static/ing.jpg')">
+
+<h1>Recipes...</h1>
+<h3>Select your ingredients</h3>
+<!-- <div style="margin: 150px;"> -->
+<div class="container">
+	<!--<header class="intro-header" style="background-image: url('static/img1.1.jpg')"></header>-->
+	<!--<img src="{{url_for('static', filename='img1.1.jpg')}}"/>-->
+  <form action="/result" method="POST">
+	<label for="Vegies">Vegies</label>
+	<select id="Vegies" name="Vegies">
+
+    <option value="1">Potato</option>
+    <option value="2">Okra</option>
+    <option value="3">Coconut</option>
+    <option value="4">BlackBeans</option>
+    <option value="5">Jalepeno</option>
+    <option value="6">Chickpeas</option>
+
+    <option value="7">Cucumber</option>
+    <option value="8">Cabbage</option>
+    <option value="9">Cauliflower</option>
+
+    <option value="10">Avocadoes</option>
+    <option value="11">Butternut Squash</option>
+    <option value="12">Shallot</option>
+
+    <option value="13">Chinese Broccoli</option>
+    <option value="14">Parsnips</option>
+    <option value="15">Green Peppers</option>
+
+    <option value="16">Water Spinach</option>
+    <option value="17">Chana Dal</option>
+    <option value="18">Red Grapefruit</option>
+
+    <option value="19">Tomatillos</option>
+    <option value="20">Urad Dal</option>
+    <option value="21">Chickpeas</option>
+    <option value="22">Coriander</option>
+
+
+
+
+    </select>
+    <br>
+    <label for="Vegies2">Vegies2</label>
+    <select id="Vegies2" name="Vegies2">
+    <option value="1">Eggplant</option>
+    <option value="2">Onion</option>
+    <option value="3">Carrot</option>
+    <option value="4">Celery</option>
+    <option value="5">Frozen Cranberrries</option>
+
+    </select>
+    <br>
+    <label for="type">Vegies3</label>
+    <select id="Vegies3" name="Vegies3">
+    <option value="1">Peas</option>
+    <option value="2">Habanero Peppers</option>
+    <option value="3">Tomato</option>
+    <option value="4">Lemon</option>
+    <option value="5">Cilantro</option>
+    <option value="6">Rasberries</option>
+    <option value="7">Yellow Tomato</option>
+    <option value="8">Yellow and Brown Mustard Seeds</option>
+
+    </select>
+    <br>
+    <label for="Flour/Bread">Flour/Bread</label>
+    <select id="Flour/Bread" name="Flour/Bread">
+    <option value="1">all-purposeflour</option>
+    <option value="2">flour</option>
+    <option value="3">cornstarch</option>
+    <option value="4">wheatflour</option>
+    </select>
+<br>
+    <label for="Flour/Bread2">Flour/Bread2</label>
+    <select id="Flour/Bread2" name="Flour/Bread2">
+    <option value="1">breadflour</option>
+    <option value="2">breadcrumbs</option>
+    <option value="3">bread</option>
+    <option value="4">breadcrumbs</option>
+    </select>
+
+<br>
+ <label for="Sauces">Sauces</label>
+    <select id="Sauces" name="Sauces">
+     <option value="1">Tahini</option>
+    <option value="2">Malt Syrup</option>
+    <option value="3">Tomato Sauce</option>
+    <option value="4">Gochujang</option>
+    <option value="5">Fish Sauce</option>
+    <option value="6">Maple Syrup</option>
+
+    <option value="7">Thai Red Curry Paste</option>
+    <option value="8">Hot Sauce</option>
+    <option value="9">White Vinegar</option>
+
+    <option value="10">Oyster Sauce</option>
+    <option value="11">Mayo</option>
+    </select>
+    <br>
+    <label for="Sauces2">Sauces2</label>
+    <select id="Sauces2" name="Sauces2">
+     <option value="1">Liquid Smoke</option>
+    <option value="2">Applecider Vinegar</option>
+    <option value="3">Soy Sauce</option>
+       </select>
+    <br>
+    <label for="Sauces3">Sauces3</label>
+    <select id="Sauces3" name="Sauces3">
+     <option value="1">Vinegar</option>
+    <option value="2">Rice Wine Vinegar</option>
+    <option value="3">Sauce</option>
+       </select>
+    <br>
+
+<label for="Meat">Meat</label>
+    <select id="Meat" name="Meat">
+    <option value="1">beef</option>
+    <option value="2">steak</option>
+    <option value="3">bonelessporkbutt</option>
+<option value="4">chicken</option>
+    <option value="5">chickenbreasts</option>
+    <option value="6">pork</option>
+<option value="7">lard</option>
+    <option value="8">ribs</option>
+    <option value="9">driedshrimp</option>
+<option value="10">salami</option>
+    <option value="11">wholeturkey</option>
+    <option value="12">bonelesschickenthighs</option>
+    </select>
+    <br>
+
+<label for="Meat2">Meat2</label>
+    <select id="Meat2" name="Meat2">
+    <option value="1">lamb</option>
+    <option value="2">eggs</option>
+    <option value="3">bonelessporkshoulder</option>
+    </select>
+    <br>
+<br>
+ <label for="Rice/Noodles">Rice/Noodles</label>
+    <select id="Rice/Noodles" name="Rice/Noodles">
+     <option value="1">Taco</option>
+    <option value="2">Rice</option>
+    <option value="3">Tortillas</option>
+    <option value="4">Basmati Rice</option>
+    <option value="5">Sticky Rice</option>
+    <option value="6">Macaroni</option>
+
+    <option value="7">Noodles</option>
+    <option value="8">Rice Noodles</option>
+    <option value="9">Long Rice</option>
+
+    <option value="10">Old Jasmine Rice</option>
+    </select>
+    <br>
+
+<label for="Spices">Spices</label>
+    <select id="Spices" name="Spices">
+    <option value="1">biryanimasala</option>
+    <option value="2">blackpeppercorns</option>
+    <option value="3">curryleaves</option>
+<option value="4">gramsgroundcannabis</option>
+    <option value="5">poblanopeppers</option>
+    <option value="6">guagillochiles</option>
+<option value="7">garlic</option>
+    <option value="8">Greekseasoning</option>
+    <option value="9">bayleaves</option>
+<option value="10">freshthyme</option>
+    <option value="11">peppercons</option>
+    <option value="12">blackpepper</option>
+<option value="13">greenchillies</option>
+    <option value="14">Ginger</option>
+    
+    </select>
+    <br>
+
+<label for="Spices2">Spices2</label>
+    <select id="Spices2" name="Spices2">
+    <option value="1">anchochiles</option>
+    <option value="2">groundcaraway</option>
+    <option value="3">NewMexicochiles</option>
+<option value="4">serranochiles</option>
+    <option value="5">chilesdeárbol</option>
+    <option value="6">seasmeseeds</option>
+<option value="7">driedchilles</option>
+    <option value="8">chilesmoritas</option>
+    <option value="9">Chillipepper</option>
+    </select>
+    <br>
+
+    <br>
+    <label for="Spices3">Spices3</label>
+    <select id="Spices3" name="Spices3">
+    <option value="1">pasillachiles</option>
+    <option value="2">arbolchiles</option>
+    <option value="3">redchilies</option>
+<option value="4">salicion</option>
+    </select>
+    <br>
+
+    
+<label for="Other">Other</label>
+	<select id="Other" name="Other">
+
+    <option value="1">Vegetable Stock</option>
+    <option value="2">Sugar</option>
+    <option value="3">Yogurt</option>
+    <option value="4">Tomatillo Salsa</option>
+    <option value="5">Coconut Milk</option>
+    <option value="6">Cheesecloth</option>
+
+    <option value="7">Ghee</option>
+    <option value="8">Oil</option>
+    <option value="9">Cheese</option>
+
+    <option value="10">Dark Brown Sugar</option>
+    <option value="11">Mozzarella Cheese</option>
+    <option value="12">Dried Black Beans</option>
+
+    <option value="13">Vegetable Oil</option>
+    <option value="14">Tofu</option>
+    <option value="15">Granulated Sugar</option>
+
+    <option value="16">Olive Oil</option>
+    <option value="17">White Beans</option>
+    <option value="18">Pecan</option>
+
+    <option value="19">Baking Soda</option>
+    <option value="20">Brown Sugar</option>
+    <option value="21">Chicken or Vegetable Stock</option>
+    <option value="22">Honey</option>
+    <option value="23">White Sugar</option>
+
+
+
+
+
+    </select>
+    <br>
+<label for="Other2">Other2</label>
+    <select id="Other2" name="Other2">
+    <option value="1">chickenstock</option>
+    <option value="2">butter</option>
+    <option value="3">lemonjuice</option>
+<option value="4">buttersquash</option>
+ <option value="5">mustardseeds</option>
+    <option value="6">yeast</option>
+    <option value="7">longbeans</option>
+<option value="8">unsaltedbuttermelted</option>
+<option value="9">coldbeer</option>
+    </select>
+    <br>
+
+<label for="Diabetic">Diabetic</label>
+    <select id="Diabetic" name="Diabetic">
+    <option value="1">Yes</option>
+    <option value="2">No</option>
+    </select>
+    <br>
+    <br>
+
+<section align="center" >
+    <input type="submit" value="CHECK OUT Recipes..." style="background-color:#74cbd3;border:1px solid #19100b;border-radius:15px;color:#000000;display:inline-block;font-family:'Montserrat',Arial, Geneva, sans-serif;font-size:14px;font-weight:700;line-height:30px;text-align:center;text-decoration:none;width:220px;-webkit-text-size-adjust:none;" />
+</section>
+</form>
+</div>
+</div>
+</body>
+</html>

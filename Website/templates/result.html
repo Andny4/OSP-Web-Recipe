@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+   <style>
+ .footer .contain .col h1{
+        font-size: 19px;
+        color: lightgray;
+       }
+ .footer .contain .col a{
+        font-size: 15px;
+       }
+.tranier .heading .box-container .box .info h3 {
+    color: black;
+
+}
+   </style> 
+</head>
+
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+<a href="#" class="logo"><span>Recipe</span>Website</a>
+
+<div id="menu" class="fas fa-bars"></div>
+
+<nav class="navbar">
+    <ul>
+        <li><a class="active" href="#home">home</a></li>
+        <li><a href="#service1">Veg Recipes</a></li>
+        <li><a href="#service2">Diabetic Recipes</a></li>
+        <li><a href="#service3">Popular Recipes</a></li>
+        <li><a href="#register">Contact</a></li>
+
+    </ul>
+</nav>
+
+</header>
+
+
+<!-- header section ends -->
+
+
+
+<!-- home section starts  -->
+
+<section class="home" id="home" class="intro-header" style="background-image: url('static/images/img3.jpg')">
+    <h1>We recommend: {{data[0]}}!</h1>
+    <a href={{data[0]}}><button class="btn">Check out {{data[0]}}</button></a>
+</section>
+
+<!-- home section ends -->
+
+
+<!-- Vegetarian service section starts  -->
+
+<section class="service" id="service1">
+
+    <h1 class="heading">Vegetarian Recipes</h1>
+    
+    <div class="box-container">
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='aloo-matar.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Aloo Matar</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#aloo-matar"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='horseradish.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Austrohungarian cream of horseradish soup</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#austro-hungarian-cream-of-horseradish-soup"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='bagels.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Bagels</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#bagels"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='tarkadal.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Tarka Dal</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#tarka-dal"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='thaopomelosalad.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Thai Pomelo Salad</h3>
+                <p>Yum Som-o</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#thai-pomelo-salad"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='vegpho.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Vegetarian Pho</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#vegetarian-pho"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='tgsalad.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Toasted Guajillo Salad</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#toasted-guajillo-salsa"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='brinjalcurry.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Brinjal Curry</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#brinjal-curry"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='gman.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Gobi Manchurian</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#gobi-manchurian"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+    </div>
+    
+    </section>
+    
+    <!-- Vegetarian service section ends -->
+
+<!-- Diabetic service section starts  -->
+
+<section class="service" id="service2">
+
+    <h1 class="heading">Diabetic Recipes</h1>
+    
+    <div class="box-container">
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='bhindifry.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Bhindi Fry</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#bhindi-fry"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='ppizza.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>No Knead Pan Pizza</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#no-knead-pan-pizza"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='vegtortilla.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Flour Tortilla</h3>
+                <p>View</p>
+                <a href="flourtortilla"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='samosapie.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Samosa Pie</h3>
+                <p>R5</p>
+                <a href="samosapie"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='dspancakes.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Diner Style Pancakes</h3>
+                <p>View</p>
+                <a href="dstylepancakes"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='aloo-matar.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Aloo Matar</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#aloo-matar"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='hmpasta.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Homemade Pasta</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#homemade-pasta"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='garlicbread.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Garlic Bread</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#garlic-bread"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img src="{{url_for('static', filename='ccolorado.jpg')}}" align="middle" />
+            <div class="info">
+                <h3>Chile Colorado</h3>
+                <p>View</p>
+                <a href="http://jeffreythompson.org/recipes/recipe.php#chile-colorado"><button class="btn">more</button></a>
+            </div>
+        </div>
+    
+    </div>
+    
+    </section>
+    
+    <!-- Diabetic service section ends -->
+
+
+<!--Featured service section starts  -->
+
+<section class="service" id="service3">
+
+<h1 class="heading">Featured Recipes</h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="{{url_for('static', filename='biryanishorba.jpg')}}" align="middle" />
+        <div class="info">
+            <h3>Biryani Shorba</h3>
+            <p>View</p>
+            <a href="http://jeffreythompson.org/recipes/recipe.php#biryani-shorba"><button class="btn">more</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="{{url_for('static', filename='mribs.jpg')}}" align="middle" />
+        <div class="info">
+            <h3>Memphis Style Ribs</h3>
+            <p>View</p>
+            <a href="http://jeffreythompson.org/recipes/recipe.php#memphis-style-ribs"><button class="btn">more</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="{{url_for('static', filename='bganoush.jpg')}}" align="middle" />
+        <div class="info">
+            <h3>Baba Ganoush</h3>
+            <p>View</p>
+            <a href="http://jeffreythompson.org/recipes/recipe.php#baba-ganoush"><button class="btn">more</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="{{url_for('static', filename='mfrapuccino.jpg')}}" align="middle" />
+        <div class="info">
+            <h3>Mocha Frapuccino</h3>
+            <p>View</p>
+            <a href="http://jeffreythompson.org/recipes/recipe.php#mocha-frappuccino"><button class="btn">more</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="{{url_for('static', filename='bbuns.jpg')}}" align="middle" />
+        <div class="info">
+            <h3>Bao Buns</h3>
+            <p>View</p>
+            <a href="http://jeffreythompson.org/recipes/recipe.php#bao-buns"><button class="btn">more</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="{{url_for('static', filename='cnuggets.jpg')}}" align="middle" />
+        <div class="info">
+            <h3>Chicken Nuggets</h3>
+            <p>View</p>
+            <a href="http://jeffreythompson.org/recipes/recipe.php#chicken-nuggets"><button class="btn">more</button></a>
+        </div>
+    </div>
+
+    
+
+    <div class="box">
+        <img src="{{url_for('static', filename='hbsquash.jpg')}}" align="middle" />
+        <div class="info">
+            <h3>Hasselback Butternut Squash</h3>
+            <p>View</p>
+            <a href="http://jeffreythompson.org/recipes/recipe.php#hasselback-butternut-squash"><button class="btn">more</button></a>
+        </div>
+    </div>
+
+
+    <div class="box">
+        <img src="{{url_for('static', filename='larbgai.jpg')}}" align="middle" />
+        <div class="info">
+            <h3>Larb Gai</h3>
+            <p>View</p>
+            <a href="http://jeffreythompson.org/recipes/recipe.php#larb-gai"><button class="btn">more</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="{{url_for('static', filename='macncheese.jpg')}}" align="middle" />
+        <div class="info">
+            <h3>Mac N Cheese</h3>
+            <p>View</p>
+            <a href="http://jeffreythompson.org/recipes/recipe.php#mac-and-cheese"><button class="btn">more</button></a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<!-- service section ends -->
+
+<!-- register section starts  -->
+
+<section class="register" id="register">
+
+<h1 class="heading">Contact Us</h1>
+
+<form action="">
+
+    <div class="inputBox">
+        <input type="text" placeholder="first name">
+        <input type="text" placeholder="last name">
+    </div>
+
+    <div class="inputBox">
+        <input type="email" placeholder="your email">
+        <input type="number" placeholder="your number">
+    </div>
+
+    <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+
+    <input type="submit" class="btn" value="Submit">
+
+</form>
+
+</section>
+
+<!-- register section ends -->
+
+<!-- footer section starts  -->
+<!--
+<div class="footer">
+    <div class="contain">
+    <div class="col">
+      <h1>Company</h1>
+      <ul>
+        <a href="aboutus.html">About</a><br>
+        <a href="">Services</a><br>
+        <a href="aboutus.html">Our Team</a>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Services</h1>
+      <ul>
+        <a href="basic.html">Basic</a><br>
+        <a href="standard.html">standard</a><br>
+        <a href="premium.html">Premeium</a>
+    
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Happy Customers</h1>
+      <ul>
+        <a href="Reviews.html">Reviews</a>
+        
+       
+      </ul>
+    </div>
+    
+    <div class="col">
+      <h1>Support</h1>
+      <ul>
+        <a href="url">Contact Us</a><br>
+        <a href="Reviews.html">Feedback</a><br>
+        <a href="url">Register</a>
+              </ul>
+    </div>
+    <div class="col social">
+      <h1>Social</h1>
+      <ul>
+        <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-youtube"></a>
+      </ul>
+    </div>
+  <div class="clearfix"></div>
+  </div>
+  </div>
+  -->
+  <!-- END OF FOOTER -->
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
