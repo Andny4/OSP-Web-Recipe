@@ -1,3 +1,3 @@
 # ROSPL - Recipe
-Open Source Project
+Recommendation System
 GUI updates and added recommendation system for a recipe website.
